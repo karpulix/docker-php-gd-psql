@@ -11,9 +11,8 @@ RUN apt-get update && \
     mariadb-client \
     libgd-dev \
     libpq-dev \
-    libpng-dev
-
-RUN docker-php-ext-configure zip --with-libzip && \
+    libpng-dev && \
+    docker-php-ext-configure zip --with-libzip && \
     docker-php-ext-install pdo_pgsql pgsql gd zip bcmath sockets && \
     curl https://getcomposer.org/installer > composer-setup.php && \
     php composer-setup.php && mv composer.phar /usr/local/bin/composer && rm composer-setup.php
