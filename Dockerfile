@@ -16,3 +16,5 @@ RUN apt-get update && \
     docker-php-ext-install pdo_pgsql pgsql gd zip bcmath sockets && \
     curl https://getcomposer.org/installer > composer-setup.php && \
     php composer-setup.php && mv composer.phar /usr/local/bin/composer && rm composer-setup.php
+ 
+ 
